@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.10)
+
+set(This Mobius)
+
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Source files
+set(SOURCES
+    src/main.cpp
+)
+
+# Add the include directory
+include_directories(include)
+
+# Create the executable
+add_executable(${This} ${SOURCES})
+
+# Link against GLFW and other necessary libraries
+target_link_libraries(${This} PRIVATE 
+    "-framework OpenGL"
+    glad
+    glfw
+)

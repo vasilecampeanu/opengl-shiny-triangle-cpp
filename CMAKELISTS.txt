@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+
+set(This Mobius3DPhysics)
+project(${This} C CXX)
+
+# Configuration for dependencies
+# Set GLFW_STANDALONE to OFF to avoid building tests and examples
+set(GLFW_STANDALONE OFF)
+
+
+# Dependencies
+
+# Add GLAD
+add_subdirectory(libs/glad)
+
+# Add GLFW
+add_subdirectory(libs/glfw)
+
+
+# Engine subdirectory
+add_subdirectory(mobius)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
