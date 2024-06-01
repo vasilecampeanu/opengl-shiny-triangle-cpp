@@ -1,1 +1,1 @@
-# mobius
+# opengl-shiny-triangle-cpp
